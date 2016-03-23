@@ -1,3 +1,18 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1{
+    margin: 2em;
+}
+
+p{
+    text-align: center;
+}
+
+.img-responsive{
+    border: 1px solid;
+}
+
+.complete-product{
+    border: 2px solid;
+}
