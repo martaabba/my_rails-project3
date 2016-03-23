@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
  
+  resources :products
   get 'static_pages/ingredients'
 
   get 'static_pages/about'
