@@ -3,11 +3,12 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
+  
   def index
     if params[:q]
       search_term = params[:q]
-      @products = Product.where("LOWER(name) LIKE? OR LOWER(description) LIKE?", "%#{search_term.downcase}%", "%#{search_term.downcase}")
-    else
+      @products = Product.where("LOWER(name) LIKE ? OR LOWER(description) LIKE? OR LOWER(color) LIKE?", "%#{search_term.downcase}%", "%#{search_term.downcase}", "%#{search_term.downcase}")      
+      else
       @products = Product.all
     end
   end
