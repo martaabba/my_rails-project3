@@ -41,8 +41,18 @@
           <li><%=link_to'Ingredients', static_pages_ingredients_path%></li>
           <li><%=link_to'Contact', static_pages_contact_path%></li>
           <li><%=link_to'About', static_pages_about_path%>></li>
-          <li><%=link_to'Purchase', products_path%></li>
-            </ul>
+          <li><%=link_to'Product', products_path%></li>
+          <li><%=link_to'Order', orders_path%></li>
+      </ul>
+      <ul class="nav pull-right">
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+          <% end %>
+        </li>
+      </ul>
               
               
           <%= form_tag("/products", method: "get", class: "form-inline search-form") do %>
@@ -57,7 +67,8 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
  
 
 <%= yield %>

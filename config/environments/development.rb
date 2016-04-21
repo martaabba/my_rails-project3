@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -36,6 +36,10 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  # Any dynamic links that show up inside emails from your development 
+  # environment generate the right URLs.
+  config.action_mailer.default_url_options = { :host => 'ide.c9.io/martaabba/my_rails_project3' }
+  
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
