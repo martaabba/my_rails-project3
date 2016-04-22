@@ -70,11 +70,18 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
  
 
 <%= yield %>
+
+<% if notice %>
+  <div id="notice" class="alert alert-info" role="alert"><%= notice %></div>
+<% end %>
+
+<% id alert %>
+  <div class="alert alert-danger" role="alert" ><%= alert %></div>
+<% end %>  
 
 <div id="footer">
   &copy; 2016 Sigil Candles
