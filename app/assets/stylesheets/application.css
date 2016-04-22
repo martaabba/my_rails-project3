@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+#brandname{
+    color: #174517;
+}
+
+#navigation-banner{
+    background-color: #89a370;
+}
+
+.navbar .nav > li > a {
+    float: none;
+    color: #174517;
+    background-color:  #89a370;
+}
+.navbar .nav > li > a:hover {
+    float: none;
+    color: #89a370;
+    background-color: #174517;
+}
