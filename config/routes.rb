@@ -2,8 +2,16 @@ Rails.application.routes.draw do
   
  
   devise_for :users
+  
   resources :users
-  resources :products
+  
+  resources :orders, only: [:index, :show, :create, :destroy]
+  
+  #this is a nested resource, because user reviews are associated with a specific product, we treat the "comments" as a subset of "products"
+  #this allows us to connect comments to products so that you can reference them : @product.comments
+  resources :products do
+    resources :comments
+  end
   
   get 'static_pages/ingredients'
 
@@ -19,7 +27,7 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
   
-  resources :orders, only: [:index, :show, :create, :destroy]
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
