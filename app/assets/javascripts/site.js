@@ -11,3 +11,5 @@ $(document).on('ready page:load', function(){
   });//close rated.raty
   
 }); //close document.on for product ratings
+
+//the system does not like these $...have i put this in the wrong file? do i need to define these somewhere?
