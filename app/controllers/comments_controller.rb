@@ -14,9 +14,7 @@ class CommentsController < ApplicationController
         end
     end
     
-    def index
-       
-    end
+    
     
     def destroy
     end

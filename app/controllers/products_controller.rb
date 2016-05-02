@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
   # GET /products.json
   
   def index
-    @comments = @product.comments.paginate(:page => params[:page], :per_page => 3)
     if params[:q]
       search_term = params[:q]
       @products = Product.where("LOWER(name) LIKE ? OR LOWER(description) LIKE? OR LOWER(color) LIKE?", "%#{search_term.downcase}%", "%#{search_term.downcase}", "%#{search_term.downcase}")      
@@ -19,7 +18,6 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @comments = @product.comments.order("created_at DESC")
-   
     
   end
 

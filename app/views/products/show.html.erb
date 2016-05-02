@@ -5,7 +5,7 @@
 <div class= "container-fluid" >
   <div class= "col-md-8 col-sm-12" id= "show">
     <p>
-       <%= image_tag(@product.image_url, class: "thumbnail" class:"img-responsive") %>
+       <%= image_tag(@product.image_url, class: "thumbnail", class:"img-responsive") %>
     </p>
     <p>
       <strong><%= @product.name %></strong>
@@ -33,7 +33,7 @@
       <div class= "container" id="oldcomments">
         
         <%= render 'comments' %>
-        <%= will_paginate %> 
+         
       </div> <!--close oldcomments container-->
   </div> <!--close avgrating-->
 </div><!--close container-fluid--->
