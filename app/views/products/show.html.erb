@@ -42,23 +42,4 @@
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 
-  <div class= "col-md-4 col-sm-12" id="avgrating">
-    <h2> Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></h2>
-    
-      <div class= "container" id="oldcomments">
-        
-        <%= render 'comments' %>
 
-        <%= will_paginate @comments %>
-
-         
-      </div> <!--close oldcomments container-->
-  </div> <!--close avgrating-->
-</div><!--close container-fluid-->
-
-
-
-
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
