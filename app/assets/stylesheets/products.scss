@@ -5,12 +5,18 @@ h1{
     margin: 2em;
 }
 
+h2{
+    padding: 1px;
+    
+}
 h4{
     text-align: center;
 }
 p{
     text-align: center;
 }
+
+
 
 .img-responsive{
     display: block;
@@ -30,14 +36,16 @@ p{
     width: 50%;
 }
 
+.rated{
+    margin: 2px auto;
+    width: 50%;
+    }
 
 #show {
     border: 15px groove #89A370;
 }
 
-#avgrating{
-    border: 10px groove;
-    }
+
 
 #newcomment{
     margin: auto;
@@ -47,4 +55,11 @@ p{
 
 .notice {
     margin: 5em;
+}
+
+#oldcomments{
+
+    width: 100%;
+    
+    
 }
