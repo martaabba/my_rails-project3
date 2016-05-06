@@ -1,4 +1,11 @@
 source 'https://rubygems.org'
+  gem 'devise'
+  gem 'cancancan'
+  
+  gem 'will_paginate', '~> 3.1.0'
+
+
+
 
 group :production do
   gem 'pg'
@@ -54,9 +61,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   
-  gem 'devise'
-  gem 'cancancan'
-  
-  gem 'will_paginate', '~> 3.1.0'
+
 end
 
