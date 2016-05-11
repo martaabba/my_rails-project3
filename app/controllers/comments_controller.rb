@@ -18,6 +18,10 @@ class CommentsController < ApplicationController
 
     
     def destroy
+        @comment = Comment.find(params[:id])
+        product = @comment.product
+        @comment.destroy 
+        redirect_to product #reload product page after comment deleted
     end
 
 private
