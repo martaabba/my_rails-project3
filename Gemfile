@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-
   gem 'devise'
   gem 'cancancan'
   
-  gem 'will_paginate', '~> 3.1.0'
+ 
+
 
 
 group :production do
@@ -61,5 +61,6 @@ group :development do
   gem 'spring'
   
   
+
 end
 
