@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UserMailerTest < ActionMailer::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def contact_form
+    UserMailer.contact_form("john@example.com", "John", "Hello World!")
+  end  
 end
