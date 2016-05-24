@@ -3,8 +3,8 @@ require 'rails_helper'
        
        
        before do
-        @userA = User.create!(email: "usertest@gmail.com", password: "jane1234")
-        @userB = User.create!(email: "testuser@gmail.com", password: "jordan1234")
+        @userA = FactoryGirl.create(:user)
+        @userB = FactoryGirl.create(:user)
        end
        
        describe "Get #show" do
