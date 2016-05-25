@@ -62,6 +62,7 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
+<<<<<<< HEAD
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.7.0)
@@ -69,6 +70,8 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.10)
     formatador (0.2.5)
+=======
+>>>>>>> guard_spork
     ffi (1.9.10)
     formatador (0.2.5)
     globalid (0.3.6)
@@ -239,7 +242,12 @@ DEPENDENCIES
   devise
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   factory_girl_rails (~> 4.0)
+=======
+  guard
+  guard-rspec
+>>>>>>> guard_spork
 =======
   guard
   guard-rspec
