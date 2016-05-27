@@ -17,3 +17,6 @@ FactoryGirl.define.do
         last_name "User"
     end
 end
+    
+
+
