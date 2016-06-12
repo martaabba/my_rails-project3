@@ -1,4 +1,4 @@
-var app= angular.module('shop', []);
+var app= angular.module('shop', ['ngResource']);
 
 app.factory('models', [function(){
     var x = {
