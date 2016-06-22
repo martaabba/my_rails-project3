@@ -1,7 +1,7 @@
 class PaymentsController < ApplicationController
-  # Set your secret key: remember to change this to your live secret key in production
+  
 
-    Stripe.api_key = "sk_test_j6AnHijPg1fLVP1A3QVicW1Y"
+   
 
 # Get the credit card details submitted by the form
     def create
