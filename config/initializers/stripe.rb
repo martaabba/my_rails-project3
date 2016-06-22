@@ -9,3 +9,5 @@ else
         :secret_key => 'sk_test_j6AnHijPg1fLVP1A3QVicW1Y '
     }
 end
+
+Stripe.api_key = Rails.configuration.stripe[:secret_key]
