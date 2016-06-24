@@ -1,30 +1,24 @@
 class PaymentsController < ApplicationController
-  # Set your secret key: remember to change this to your live secret key in production
+ 
 
-    Stripe.api_key = "sk_test_j6AnHijPg1fLVP1A3QVicW1Y"
+    
 
 # Get the credit card details submitted by the form
     def create
-        @product = params[:product_id]
+        token = params[:stripeToken]
+        @product = product.find(params[:product_id])
         @user = current_user
         
-       
-        token = params[:stripeToken]
-
 # Create the charge on Stripe's servers - this will charge the user's card
         begin
             charge = Stripe::Charge.create(
-                :amount => 500, # amount in cents, again
+                :amount => (@product.price * 100).to_i ,
                 :currency => "usd",
                 :source => token,
                 :description => params[:stripeEmail]
                 )
                 if charge.paid
-                    order.create(
-                        product_id,
-                        user_id,
-                        total
-                        )
+                    order.create(user_id: @user.id, product_id: @product.id, total: @product.price)
                 end
                 
         rescue Stripe::CardError => e
@@ -32,8 +26,10 @@ class PaymentsController < ApplicationController
             body = e.json_body
             err = body[:error]
             flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
+            redirect_to product_path(product)
         end
-        redirect_to product_path(product)
+        flash[:notice] = "Payment successfully processed"
+        reidrect_to product_path(@product)
     end
         
         
