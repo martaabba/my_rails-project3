@@ -10,6 +10,14 @@ $(document).on('ready page:load', function(){
     }
   });//close rated.raty
   
-}); //close document.on for product ratings
+  $('.img-zoom').elevateZoom({
+		zoomType	: "inner", cursor: "crosshair"
+
+	}); //close zoom
+    
+  
+}); //close document.on for product ratings and for imageZoom
+
+
 
 //the system does not like these $...have i put this in the wrong file? do i need to define these somewhere?

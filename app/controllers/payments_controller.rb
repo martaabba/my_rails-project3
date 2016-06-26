@@ -1,7 +1,13 @@
 class PaymentsController < ApplicationController
+<<<<<<< HEAD
  
 
     
+=======
+  
+
+   
+>>>>>>> jQuery
 
 # Get the credit card details submitted by the form
     def create
