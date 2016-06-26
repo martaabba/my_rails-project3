@@ -70,7 +70,7 @@ group :development do
   gem 'spork'
   gem 'spork-rails'
 
-  gem 'stripe'
+
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
