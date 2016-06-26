@@ -1,13 +1,7 @@
 class PaymentsController < ApplicationController
-<<<<<<< HEAD
  
 
     
-=======
-  
-
-   
->>>>>>> jQuery
 
 # Get the credit card details submitted by the form
     def create
@@ -37,6 +31,10 @@ class PaymentsController < ApplicationController
         flash[:notice] = "Payment successfully processed"
         reidrect_to product_path(@product)
     end
+        
+        
+end
+
         
         
 end
