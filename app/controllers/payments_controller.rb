@@ -1,8 +1,5 @@
 class PaymentsController < ApplicationController
  
-
-    
-
 # Get the credit card details submitted by the form
     def create
         token = params[:stripeToken]
@@ -18,7 +15,7 @@ class PaymentsController < ApplicationController
                 :description => params[:stripeEmail]
                 )
                 if charge.paid
-                    order.create(user_id: @user.id, product_id: @product.id, total: @product.price)
+                    Order.create(user_id: @user.id, product_id: @product.id, total: @product.price)
                 end
                 
         rescue Stripe::CardError => e
@@ -37,4 +34,3 @@ end
 
         
         
-end
