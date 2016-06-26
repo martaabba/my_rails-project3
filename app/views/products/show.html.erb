@@ -5,7 +5,7 @@
 <div class= "container-fluid">
   <div class= "col-md-8 col-sm-12" id= "show" class="row">
     <p>
-       <%= image_tag(@product.image_url, class:"candle img-responsive img-zoom", data_zoom_image: "@product.image_url" ) %>
+       <%= image_tag(@product.image_url, class:"img-responsive img-zoom", data_zoom_image: "{@product.image_url}" ) %>
     </p>
     <p>
       <strong><%= @product.name %></strong>

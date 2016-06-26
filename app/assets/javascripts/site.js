@@ -10,6 +10,8 @@ $(document).on('ready page:load', function(){
     }
   });//close rated.raty
   
+  
+  //Zoom Elevator
   $('.img-zoom').elevateZoom({
 		zoomType	: "inner", cursor: "crosshair"
 
