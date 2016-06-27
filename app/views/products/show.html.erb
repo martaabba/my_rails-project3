@@ -38,7 +38,7 @@
     
       <div class= "container" id="oldcomments">
         
-        <%= render 'comments' %>
+        <%= render 'comments', collection: @comments %>
         <%= will_paginate @comments %>
          
       </div> <!--close oldcomments container-->
