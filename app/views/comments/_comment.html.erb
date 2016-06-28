@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" class="product-reviews">
             <hr>
             <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
               
@@ -10,5 +10,4 @@
                
                <div class="rated" data-score="<%= comment.rating %>"></div>
                <p><%= comment.body %></p>
-               
-<% end %>
+</div>               
