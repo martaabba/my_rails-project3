@@ -3,6 +3,8 @@ class StaticPagesController < ApplicationController
   
   def landing_page
     @products = Product.limit(3)
+    Rails.cache.write("foo", "bar")
+    puts Rails.cache.read("foo")
   end
 
   def thank_you
